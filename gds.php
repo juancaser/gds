@@ -185,6 +185,19 @@ class gds{
 	}
 	
 	/**
+	 * Get row count
+	 *
+	 * @return int Return row count
+	 */
+	public function get_row_count(){
+		if(isset($this->gds->entry->rows)){
+			return count($this->gds->entry->rows);
+		}else{
+			return NULL;
+		}
+	}
+	
+	/**
 	 * Check if column label exists
 	 *
 	 * @param string $key Column key
